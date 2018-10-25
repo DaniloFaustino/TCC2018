@@ -16,7 +16,9 @@ namespace TCC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            MenuPrincipal inicio = new MenuPrincipal();
+            inicio.Show();
+            Application.Run();
         }
     }
 }
