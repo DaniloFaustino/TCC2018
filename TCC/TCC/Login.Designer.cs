@@ -1,6 +1,6 @@
 ﻿namespace TCC
 {
-    partial class MenuPrincipal
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.BtnEntrar = new System.Windows.Forms.Button();
             this.LinkCad = new System.Windows.Forms.LinkLabel();
             this.LinkSenha = new System.Windows.Forms.LinkLabel();
+            this.LabErro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LabUser
@@ -81,6 +82,7 @@
             this.BtnEntrar.TabIndex = 4;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = true;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // LinkCad
             // 
@@ -102,11 +104,24 @@
             this.LinkSenha.TabStop = true;
             this.LinkSenha.Text = "Esqueci minha senha";
             // 
-            // MenuPrincipal
+            // LabErro
+            // 
+            this.LabErro.AutoSize = true;
+            this.LabErro.ForeColor = System.Drawing.Color.Red;
+            this.LabErro.Location = new System.Drawing.Point(78, 239);
+            this.LabErro.Name = "LabErro";
+            this.LabErro.Size = new System.Drawing.Size(115, 13);
+            this.LabErro.TabIndex = 7;
+            this.LabErro.Text = "Informações Incorretas";
+            this.LabErro.Visible = false;
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.LabErro);
             this.Controls.Add(this.LinkSenha);
             this.Controls.Add(this.LinkCad);
             this.Controls.Add(this.BtnEntrar);
@@ -114,7 +129,7 @@
             this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.LabSenha);
             this.Controls.Add(this.LabUser);
-            this.Name = "MenuPrincipal";
+            this.Name = "Login";
             this.Text = "MenuPrincipal";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,6 +145,7 @@
         private System.Windows.Forms.Button BtnEntrar;
         private System.Windows.Forms.LinkLabel LinkCad;
         private System.Windows.Forms.LinkLabel LinkSenha;
+        private System.Windows.Forms.Label LabErro;
     }
 }
 

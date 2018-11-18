@@ -64,11 +64,23 @@
     <Compile Include="CadastroSindico.Designer.cs">
       <DependentUpon>CadastroSindico.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdministracao.Designer.cs">
+      <DependentUpon>MenuAdministracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCondomino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuCondomino.Designer.cs">
+      <DependentUpon>MenuCondomino.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,8 +93,14 @@
     <EmbeddedResource Include="CadastroSindico.resx">
       <DependentUpon>CadastroSindico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdministracao.resx">
+      <DependentUpon>MenuAdministracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCondomino.resx">
+      <DependentUpon>MenuCondomino.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
