@@ -30,22 +30,18 @@
         {
             this.LabSindico = new System.Windows.Forms.Label();
             this.GroupInfoPessoais = new System.Windows.Forms.GroupBox();
-            this.LabNome = new System.Windows.Forms.Label();
-            this.LabTipo = new System.Windows.Forms.Label();
-            this.ComboTipo = new System.Windows.Forms.ComboBox();
-            this.TxtNome = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.LabCNPJ_CPF = new System.Windows.Forms.Label();
             this.TxtCNPJ_CPF = new System.Windows.Forms.TextBox();
+            this.LabCNPJ_CPF = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtNome = new System.Windows.Forms.TextBox();
+            this.ComboTipo = new System.Windows.Forms.ComboBox();
+            this.LabTipo = new System.Windows.Forms.Label();
+            this.LabNome = new System.Windows.Forms.Label();
             this.GroupInfoLogin = new System.Windows.Forms.GroupBox();
-            this.LabEmail = new System.Windows.Forms.Label();
-            this.LabUser = new System.Windows.Forms.Label();
-            this.LabSenha = new System.Windows.Forms.Label();
-            this.LabConfirmarSenha = new System.Windows.Forms.Label();
-            this.TxtEmail = new System.Windows.Forms.TextBox();
-            this.TxtSenha = new System.Windows.Forms.MaskedTextBox();
-            this.TxtUser = new System.Windows.Forms.TextBox();
             this.TxtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.TxtSenha = new System.Windows.Forms.MaskedTextBox();
+            this.LabConfirmarSenha = new System.Windows.Forms.Label();
+            this.LabSenha = new System.Windows.Forms.Label();
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.BtnVoltar = new System.Windows.Forms.Button();
             this.GroupInfoPessoais.SuspendLayout();
@@ -78,48 +74,13 @@
             this.GroupInfoPessoais.TabIndex = 1;
             this.GroupInfoPessoais.TabStop = false;
             this.GroupInfoPessoais.Text = "Informações Pessoais";
-            this.GroupInfoPessoais.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // LabNome
+            // TxtCNPJ_CPF
             // 
-            this.LabNome.AutoSize = true;
-            this.LabNome.Location = new System.Drawing.Point(15, 30);
-            this.LabNome.Name = "LabNome";
-            this.LabNome.Size = new System.Drawing.Size(49, 17);
-            this.LabNome.TabIndex = 0;
-            this.LabNome.Text = "Nome:";
-            // 
-            // LabTipo
-            // 
-            this.LabTipo.AutoSize = true;
-            this.LabTipo.Location = new System.Drawing.Point(18, 60);
-            this.LabTipo.Name = "LabTipo";
-            this.LabTipo.Size = new System.Drawing.Size(40, 17);
-            this.LabTipo.TabIndex = 1;
-            this.LabTipo.Text = "Tipo:";
-            // 
-            // ComboTipo
-            // 
-            this.ComboTipo.FormattingEnabled = true;
-            this.ComboTipo.Location = new System.Drawing.Point(64, 60);
-            this.ComboTipo.Name = "ComboTipo";
-            this.ComboTipo.Size = new System.Drawing.Size(121, 24);
-            this.ComboTipo.TabIndex = 2;
-            // 
-            // TxtNome
-            // 
-            this.TxtNome.Location = new System.Drawing.Point(76, 30);
-            this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(100, 23);
-            this.TxtNome.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(205, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
-            this.label4.TabIndex = 4;
+            this.TxtCNPJ_CPF.Location = new System.Drawing.Point(298, 30);
+            this.TxtCNPJ_CPF.Name = "TxtCNPJ_CPF";
+            this.TxtCNPJ_CPF.Size = new System.Drawing.Size(100, 23);
+            this.TxtCNPJ_CPF.TabIndex = 6;
             // 
             // LabCNPJ_CPF
             // 
@@ -130,23 +91,53 @@
             this.LabCNPJ_CPF.TabIndex = 5;
             this.LabCNPJ_CPF.Text = "CNPJ/CPF:";
             // 
-            // TxtCNPJ_CPF
+            // label4
             // 
-            this.TxtCNPJ_CPF.Location = new System.Drawing.Point(298, 30);
-            this.TxtCNPJ_CPF.Name = "TxtCNPJ_CPF";
-            this.TxtCNPJ_CPF.Size = new System.Drawing.Size(100, 23);
-            this.TxtCNPJ_CPF.TabIndex = 6;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(205, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 4;
+            // 
+            // TxtNome
+            // 
+            this.TxtNome.Location = new System.Drawing.Point(76, 30);
+            this.TxtNome.Name = "TxtNome";
+            this.TxtNome.Size = new System.Drawing.Size(100, 23);
+            this.TxtNome.TabIndex = 3;
+            // 
+            // ComboTipo
+            // 
+            this.ComboTipo.FormattingEnabled = true;
+            this.ComboTipo.Location = new System.Drawing.Point(64, 60);
+            this.ComboTipo.Name = "ComboTipo";
+            this.ComboTipo.Size = new System.Drawing.Size(121, 24);
+            this.ComboTipo.TabIndex = 2;
+            // 
+            // LabTipo
+            // 
+            this.LabTipo.AutoSize = true;
+            this.LabTipo.Location = new System.Drawing.Point(18, 60);
+            this.LabTipo.Name = "LabTipo";
+            this.LabTipo.Size = new System.Drawing.Size(40, 17);
+            this.LabTipo.TabIndex = 1;
+            this.LabTipo.Text = "Tipo:";
+            // 
+            // LabNome
+            // 
+            this.LabNome.AutoSize = true;
+            this.LabNome.Location = new System.Drawing.Point(15, 30);
+            this.LabNome.Name = "LabNome";
+            this.LabNome.Size = new System.Drawing.Size(49, 17);
+            this.LabNome.TabIndex = 0;
+            this.LabNome.Text = "Nome:";
             // 
             // GroupInfoLogin
             // 
             this.GroupInfoLogin.Controls.Add(this.TxtConfirmarSenha);
-            this.GroupInfoLogin.Controls.Add(this.TxtUser);
             this.GroupInfoLogin.Controls.Add(this.TxtSenha);
-            this.GroupInfoLogin.Controls.Add(this.TxtEmail);
             this.GroupInfoLogin.Controls.Add(this.LabConfirmarSenha);
             this.GroupInfoLogin.Controls.Add(this.LabSenha);
-            this.GroupInfoLogin.Controls.Add(this.LabUser);
-            this.GroupInfoLogin.Controls.Add(this.LabEmail);
             this.GroupInfoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupInfoLogin.Location = new System.Drawing.Point(47, 166);
             this.GroupInfoLogin.Name = "GroupInfoLogin";
@@ -155,69 +146,37 @@
             this.GroupInfoLogin.TabStop = false;
             this.GroupInfoLogin.Text = "Informações de Login";
             // 
-            // LabEmail
+            // TxtConfirmarSenha
             // 
-            this.LabEmail.AutoSize = true;
-            this.LabEmail.Location = new System.Drawing.Point(21, 33);
-            this.LabEmail.Name = "LabEmail";
-            this.LabEmail.Size = new System.Drawing.Size(46, 17);
-            this.LabEmail.TabIndex = 0;
-            this.LabEmail.Text = "Email:";
+            this.TxtConfirmarSenha.Location = new System.Drawing.Point(332, 45);
+            this.TxtConfirmarSenha.Name = "TxtConfirmarSenha";
+            this.TxtConfirmarSenha.Size = new System.Drawing.Size(100, 23);
+            this.TxtConfirmarSenha.TabIndex = 7;
             // 
-            // LabUser
+            // TxtSenha
             // 
-            this.LabUser.AutoSize = true;
-            this.LabUser.Location = new System.Drawing.Point(205, 33);
-            this.LabUser.Name = "LabUser";
-            this.LabUser.Size = new System.Drawing.Size(61, 17);
-            this.LabUser.TabIndex = 1;
-            this.LabUser.Text = "Usuário:";
-            // 
-            // LabSenha
-            // 
-            this.LabSenha.AutoSize = true;
-            this.LabSenha.Location = new System.Drawing.Point(24, 67);
-            this.LabSenha.Name = "LabSenha";
-            this.LabSenha.Size = new System.Drawing.Size(53, 17);
-            this.LabSenha.TabIndex = 2;
-            this.LabSenha.Text = "Senha:";
+            this.TxtSenha.Location = new System.Drawing.Point(81, 45);
+            this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.Size = new System.Drawing.Size(100, 23);
+            this.TxtSenha.TabIndex = 5;
             // 
             // LabConfirmarSenha
             // 
             this.LabConfirmarSenha.AutoSize = true;
-            this.LabConfirmarSenha.Location = new System.Drawing.Point(208, 67);
+            this.LabConfirmarSenha.Location = new System.Drawing.Point(208, 48);
             this.LabConfirmarSenha.Name = "LabConfirmarSenha";
             this.LabConfirmarSenha.Size = new System.Drawing.Size(118, 17);
             this.LabConfirmarSenha.TabIndex = 3;
             this.LabConfirmarSenha.Text = "Confirmar Senha:";
             // 
-            // TxtEmail
+            // LabSenha
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(76, 33);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(100, 23);
-            this.TxtEmail.TabIndex = 4;
-            // 
-            // TxtSenha
-            // 
-            this.TxtSenha.Location = new System.Drawing.Point(84, 67);
-            this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.Size = new System.Drawing.Size(100, 23);
-            this.TxtSenha.TabIndex = 5;
-            // 
-            // TxtUser
-            // 
-            this.TxtUser.Location = new System.Drawing.Point(282, 30);
-            this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(100, 23);
-            this.TxtUser.TabIndex = 6;
-            // 
-            // TxtConfirmarSenha
-            // 
-            this.TxtConfirmarSenha.Location = new System.Drawing.Point(343, 67);
-            this.TxtConfirmarSenha.Name = "TxtConfirmarSenha";
-            this.TxtConfirmarSenha.Size = new System.Drawing.Size(100, 23);
-            this.TxtConfirmarSenha.TabIndex = 7;
+            this.LabSenha.AutoSize = true;
+            this.LabSenha.Location = new System.Drawing.Point(22, 48);
+            this.LabSenha.Name = "LabSenha";
+            this.LabSenha.Size = new System.Drawing.Size(53, 17);
+            this.LabSenha.TabIndex = 2;
+            this.LabSenha.Text = "Senha:";
             // 
             // BtnCadastrar
             // 
@@ -227,6 +186,7 @@
             this.BtnCadastrar.TabIndex = 3;
             this.BtnCadastrar.Text = "Cadastrar";
             this.BtnCadastrar.UseVisualStyleBackColor = true;
+            this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // BtnVoltar
             // 
@@ -271,13 +231,9 @@
         private System.Windows.Forms.TextBox TxtCNPJ_CPF;
         private System.Windows.Forms.GroupBox GroupInfoLogin;
         private System.Windows.Forms.TextBox TxtConfirmarSenha;
-        private System.Windows.Forms.TextBox TxtUser;
         private System.Windows.Forms.MaskedTextBox TxtSenha;
-        private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label LabConfirmarSenha;
         private System.Windows.Forms.Label LabSenha;
-        private System.Windows.Forms.Label LabUser;
-        private System.Windows.Forms.Label LabEmail;
         private System.Windows.Forms.Button BtnCadastrar;
         private System.Windows.Forms.Button BtnVoltar;
     }

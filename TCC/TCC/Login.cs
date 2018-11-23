@@ -101,5 +101,11 @@ namespace TCC
             }
 
         }
+
+        private void LinkCad_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroOpcoes cadOp = new CadastroOpcoes();
+            cadOp.ShowDialog(); 
+        }
     }
 }

@@ -12,12 +12,16 @@ namespace TCC
 {
     public partial class CadastroSindico : Form
     {
+
+
         public CadastroSindico()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
         {
 
         }

@@ -52,6 +52,7 @@
             this.BtnCadCond.TabIndex = 1;
             this.BtnCadCond.Text = "Cadastrar Condomínio";
             this.BtnCadCond.UseVisualStyleBackColor = true;
+            this.BtnCadCond.Click += new System.EventHandler(this.BtnCadCond_Click);
             // 
             // BtnCadApt
             // 

@@ -65,7 +65,7 @@
             this.LabTitulo.Size = new System.Drawing.Size(107, 17);
             this.LabTitulo.TabIndex = 0;
             this.LabTitulo.Text = "CONDOMÍNIO";
-            this.LabTitulo.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // LabNome
             // 
@@ -136,7 +136,7 @@
             this.ComboCustos.Name = "ComboCustos";
             this.ComboCustos.Size = new System.Drawing.Size(121, 24);
             this.ComboCustos.TabIndex = 8;
-            this.ComboCustos.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            
             // 
             // LabValorCond
             // 
@@ -266,6 +266,7 @@
             this.BtnProx.TabIndex = 21;
             this.BtnProx.Text = "Próximo";
             this.BtnProx.UseVisualStyleBackColor = true;
+            this.BtnProx.Click += new System.EventHandler(this.BtnProx_Click);
             // 
             // BtnVoltar
             // 

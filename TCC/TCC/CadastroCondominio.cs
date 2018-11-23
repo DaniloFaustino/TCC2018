@@ -12,19 +12,24 @@ namespace TCC
 {
     public partial class CadastroCondominio : Form
     {
+        public string Nome { get; set; }
+        public int Tipo { get; set; }
+        public string CNPJ_CPF {get; set;}
+        public string Senha { get; set; }
+
+
         public CadastroCondominio()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        
+
+        private void BtnProx_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

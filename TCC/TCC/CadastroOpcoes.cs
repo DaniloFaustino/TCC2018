@@ -21,5 +21,11 @@ namespace TCC
         {
 
         }
+
+        private void BtnCadCond_Click(object sender, EventArgs e)
+        {
+            CadastroCondominio cadCondo = new CadastroCondominio();
+            cadCondo.Show();
+        }
     }
 }

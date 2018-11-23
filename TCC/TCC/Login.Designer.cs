@@ -93,6 +93,7 @@
             this.LinkCad.TabIndex = 5;
             this.LinkCad.TabStop = true;
             this.LinkCad.Text = "Não possuo cadastro";
+            this.LinkCad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkCad_LinkClicked);
             // 
             // LinkSenha
             // 
