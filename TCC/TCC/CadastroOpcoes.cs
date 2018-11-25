@@ -27,5 +27,11 @@ namespace TCC
             CadastroCondominio cadCondo = new CadastroCondominio();
             cadCondo.Show();
         }
+
+        private void BtnCadApt_Click(object sender, EventArgs e)
+        {
+            CadastroCondomino CadCond = new CadastroCondomino();
+            CadCond.Show();
+        }
     }
 }

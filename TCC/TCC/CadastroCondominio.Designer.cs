@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LabTitulo = new System.Windows.Forms.Label();
             this.LabNome = new System.Windows.Forms.Label();
             this.LabEndereço = new System.Windows.Forms.Label();
             this.LabCNPJ = new System.Windows.Forms.Label();
@@ -36,42 +35,35 @@
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.TxtValorCond = new System.Windows.Forms.TextBox();
             this.TxtEndereco = new System.Windows.Forms.TextBox();
-            this.ComboCustos = new System.Windows.Forms.ComboBox();
             this.LabValorCond = new System.Windows.Forms.Label();
-            this.LabMulta = new System.Windows.Forms.Label();
-            this.LabValorMulta = new System.Windows.Forms.Label();
-            this.TxtValorCustos = new System.Windows.Forms.TextBox();
             this.TxtCNPJ = new System.Windows.Forms.TextBox();
-            this.ComboMulta = new System.Windows.Forms.ComboBox();
-            this.LabCustos = new System.Windows.Forms.Label();
-            this.LabValorCustos = new System.Windows.Forms.Label();
             this.ComboAptNumero = new System.Windows.Forms.ComboBox();
-            this.TxtValorMulta = new System.Windows.Forms.TextBox();
-            this.GroupInfoBasica = new System.Windows.Forms.GroupBox();
-            this.GroupInfoFinanceira = new System.Windows.Forms.GroupBox();
-            this.BtnProx = new System.Windows.Forms.Button();
-            this.BtnVoltar = new System.Windows.Forms.Button();
-            this.GroupInfoBasica.SuspendLayout();
-            this.GroupInfoFinanceira.SuspendLayout();
+            this.GroupCondominio = new System.Windows.Forms.GroupBox();
+            this.LabCadCondo = new System.Windows.Forms.Label();
+            this.BtnCadastrar = new System.Windows.Forms.Button();
+            this.GroupAdm = new System.Windows.Forms.GroupBox();
+            this.LabCadAdm = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.TxtSenha = new System.Windows.Forms.MaskedTextBox();
+            this.LabConfirmarSenha = new System.Windows.Forms.Label();
+            this.LabSenha = new System.Windows.Forms.Label();
+            this.TxtCNPJ_CPF = new System.Windows.Forms.TextBox();
+            this.LabCNPJ_CPF = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtNomeAdm = new System.Windows.Forms.TextBox();
+            this.LabNomeAdm = new System.Windows.Forms.Label();
+            this.RadSelecionarCondo = new System.Windows.Forms.RadioButton();
+            this.RadSelecionarAdm = new System.Windows.Forms.RadioButton();
+            this.GroupCondominio.SuspendLayout();
+            this.GroupAdm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LabTitulo
-            // 
-            this.LabTitulo.AutoSize = true;
-            this.LabTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabTitulo.Location = new System.Drawing.Point(239, 9);
-            this.LabTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LabTitulo.Name = "LabTitulo";
-            this.LabTitulo.Size = new System.Drawing.Size(107, 17);
-            this.LabTitulo.TabIndex = 0;
-            this.LabTitulo.Text = "CONDOMÍNIO";
-            
             // 
             // LabNome
             // 
             this.LabNome.AutoSize = true;
             this.LabNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabNome.Location = new System.Drawing.Point(16, 29);
+            this.LabNome.Location = new System.Drawing.Point(16, 25);
             this.LabNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabNome.Name = "LabNome";
             this.LabNome.Size = new System.Drawing.Size(49, 17);
@@ -82,7 +74,7 @@
             // 
             this.LabEndereço.AutoSize = true;
             this.LabEndereço.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabEndereço.Location = new System.Drawing.Point(231, 29);
+            this.LabEndereço.Location = new System.Drawing.Point(16, 83);
             this.LabEndereço.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabEndereço.Name = "LabEndereço";
             this.LabEndereço.Size = new System.Drawing.Size(73, 17);
@@ -92,7 +84,7 @@
             // LabCNPJ
             // 
             this.LabCNPJ.AutoSize = true;
-            this.LabCNPJ.Location = new System.Drawing.Point(16, 65);
+            this.LabCNPJ.Location = new System.Drawing.Point(16, 54);
             this.LabCNPJ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabCNPJ.Name = "LabCNPJ";
             this.LabCNPJ.Size = new System.Drawing.Size(47, 17);
@@ -102,7 +94,7 @@
             // LabAptNumero
             // 
             this.LabAptNumero.AutoSize = true;
-            this.LabAptNumero.Location = new System.Drawing.Point(231, 65);
+            this.LabAptNumero.Location = new System.Drawing.Point(16, 112);
             this.LabAptNumero.Name = "LabAptNumero";
             this.LabAptNumero.Size = new System.Drawing.Size(139, 17);
             this.LabAptNumero.TabIndex = 4;
@@ -110,199 +102,265 @@
             // 
             // TxtNome
             // 
-            this.TxtNome.Location = new System.Drawing.Point(72, 29);
+            this.TxtNome.Location = new System.Drawing.Point(72, 22);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(146, 23);
             this.TxtNome.TabIndex = 5;
             // 
             // TxtValorCond
             // 
-            this.TxtValorCond.Location = new System.Drawing.Point(165, 28);
+            this.TxtValorCond.Location = new System.Drawing.Point(165, 139);
             this.TxtValorCond.Name = "TxtValorCond";
             this.TxtValorCond.Size = new System.Drawing.Size(71, 23);
             this.TxtValorCond.TabIndex = 6;
             // 
             // TxtEndereco
             // 
-            this.TxtEndereco.Location = new System.Drawing.Point(311, 29);
+            this.TxtEndereco.Location = new System.Drawing.Point(96, 80);
             this.TxtEndereco.Name = "TxtEndereco";
             this.TxtEndereco.Size = new System.Drawing.Size(110, 23);
             this.TxtEndereco.TabIndex = 7;
             // 
-            // ComboCustos
-            // 
-            this.ComboCustos.FormattingEnabled = true;
-            this.ComboCustos.Location = new System.Drawing.Point(360, 62);
-            this.ComboCustos.Name = "ComboCustos";
-            this.ComboCustos.Size = new System.Drawing.Size(121, 24);
-            this.ComboCustos.TabIndex = 8;
-            
-            // 
             // LabValorCond
             // 
             this.LabValorCond.AutoSize = true;
-            this.LabValorCond.Location = new System.Drawing.Point(16, 28);
+            this.LabValorCond.Location = new System.Drawing.Point(16, 142);
             this.LabValorCond.Name = "LabValorCond";
             this.LabValorCond.Size = new System.Drawing.Size(143, 17);
             this.LabValorCond.TabIndex = 9;
             this.LabValorCond.Text = "Valor do Condomínio:";
             // 
-            // LabMulta
-            // 
-            this.LabMulta.AutoSize = true;
-            this.LabMulta.Location = new System.Drawing.Point(16, 65);
-            this.LabMulta.Name = "LabMulta";
-            this.LabMulta.Size = new System.Drawing.Size(46, 17);
-            this.LabMulta.TabIndex = 10;
-            this.LabMulta.Text = "Multa:";
-            // 
-            // LabValorMulta
-            // 
-            this.LabValorMulta.AutoSize = true;
-            this.LabValorMulta.Location = new System.Drawing.Point(17, 98);
-            this.LabValorMulta.Name = "LabValorMulta";
-            this.LabValorMulta.Size = new System.Drawing.Size(45, 17);
-            this.LabValorMulta.TabIndex = 11;
-            this.LabValorMulta.Text = "Valor:";
-            // 
-            // TxtValorCustos
-            // 
-            this.TxtValorCustos.Location = new System.Drawing.Point(294, 98);
-            this.TxtValorCustos.Name = "TxtValorCustos";
-            this.TxtValorCustos.Size = new System.Drawing.Size(100, 23);
-            this.TxtValorCustos.TabIndex = 12;
-            // 
             // TxtCNPJ
             // 
-            this.TxtCNPJ.Location = new System.Drawing.Point(70, 62);
+            this.TxtCNPJ.Location = new System.Drawing.Point(70, 51);
             this.TxtCNPJ.Name = "TxtCNPJ";
             this.TxtCNPJ.Size = new System.Drawing.Size(108, 23);
             this.TxtCNPJ.TabIndex = 13;
             // 
-            // ComboMulta
-            // 
-            this.ComboMulta.FormattingEnabled = true;
-            this.ComboMulta.Location = new System.Drawing.Point(68, 62);
-            this.ComboMulta.Name = "ComboMulta";
-            this.ComboMulta.Size = new System.Drawing.Size(121, 24);
-            this.ComboMulta.TabIndex = 14;
-            // 
-            // LabCustos
-            // 
-            this.LabCustos.AutoSize = true;
-            this.LabCustos.Location = new System.Drawing.Point(231, 65);
-            this.LabCustos.Name = "LabCustos";
-            this.LabCustos.Size = new System.Drawing.Size(123, 17);
-            this.LabCustos.TabIndex = 15;
-            this.LabCustos.Text = "Custos Adicionais:";
-            // 
-            // LabValorCustos
-            // 
-            this.LabValorCustos.AutoSize = true;
-            this.LabValorCustos.Location = new System.Drawing.Point(231, 98);
-            this.LabValorCustos.Name = "LabValorCustos";
-            this.LabValorCustos.Size = new System.Drawing.Size(45, 17);
-            this.LabValorCustos.TabIndex = 16;
-            this.LabValorCustos.Text = "Valor:";
-            // 
             // ComboAptNumero
             // 
             this.ComboAptNumero.FormattingEnabled = true;
-            this.ComboAptNumero.Location = new System.Drawing.Point(371, 61);
+            this.ComboAptNumero.Items.AddRange(new object[] {
+            "1 ",
+            "2 ",
+            "3 ",
+            "4 ",
+            "5 ",
+            "6 ",
+            "7 ",
+            "8 ",
+            "9 ",
+            "10 "});
+            this.ComboAptNumero.Location = new System.Drawing.Point(161, 109);
             this.ComboAptNumero.Name = "ComboAptNumero";
             this.ComboAptNumero.Size = new System.Drawing.Size(121, 24);
             this.ComboAptNumero.TabIndex = 17;
             // 
-            // TxtValorMulta
+            // GroupCondominio
             // 
-            this.TxtValorMulta.Location = new System.Drawing.Point(68, 95);
-            this.TxtValorMulta.Name = "TxtValorMulta";
-            this.TxtValorMulta.Size = new System.Drawing.Size(94, 23);
-            this.TxtValorMulta.TabIndex = 18;
+            this.GroupCondominio.Controls.Add(this.LabCadCondo);
+            this.GroupCondominio.Controls.Add(this.TxtValorCond);
+            this.GroupCondominio.Controls.Add(this.LabNome);
+            this.GroupCondominio.Controls.Add(this.LabValorCond);
+            this.GroupCondominio.Controls.Add(this.TxtNome);
+            this.GroupCondominio.Controls.Add(this.ComboAptNumero);
+            this.GroupCondominio.Controls.Add(this.LabEndereço);
+            this.GroupCondominio.Controls.Add(this.TxtEndereco);
+            this.GroupCondominio.Controls.Add(this.LabCNPJ);
+            this.GroupCondominio.Controls.Add(this.TxtCNPJ);
+            this.GroupCondominio.Controls.Add(this.LabAptNumero);
+            this.GroupCondominio.ForeColor = System.Drawing.Color.Sienna;
+            this.GroupCondominio.Location = new System.Drawing.Point(47, 52);
+            this.GroupCondominio.Name = "GroupCondominio";
+            this.GroupCondominio.Size = new System.Drawing.Size(317, 195);
+            this.GroupCondominio.TabIndex = 19;
+            this.GroupCondominio.TabStop = false;
+            this.GroupCondominio.Text = "Informações do Condomínio";
+            this.GroupCondominio.Visible = false;
             // 
-            // GroupInfoBasica
+            // LabCadCondo
             // 
-            this.GroupInfoBasica.Controls.Add(this.LabNome);
-            this.GroupInfoBasica.Controls.Add(this.TxtNome);
-            this.GroupInfoBasica.Controls.Add(this.ComboAptNumero);
-            this.GroupInfoBasica.Controls.Add(this.LabEndereço);
-            this.GroupInfoBasica.Controls.Add(this.TxtEndereco);
-            this.GroupInfoBasica.Controls.Add(this.LabCNPJ);
-            this.GroupInfoBasica.Controls.Add(this.TxtCNPJ);
-            this.GroupInfoBasica.Controls.Add(this.LabAptNumero);
-            this.GroupInfoBasica.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.GroupInfoBasica.Location = new System.Drawing.Point(47, 52);
-            this.GroupInfoBasica.Name = "GroupInfoBasica";
-            this.GroupInfoBasica.Size = new System.Drawing.Size(510, 100);
-            this.GroupInfoBasica.TabIndex = 19;
-            this.GroupInfoBasica.TabStop = false;
-            this.GroupInfoBasica.Text = "Informações Básicas";
+            this.LabCadCondo.AutoSize = true;
+            this.LabCadCondo.ForeColor = System.Drawing.Color.Sienna;
+            this.LabCadCondo.Location = new System.Drawing.Point(16, 168);
+            this.LabCadCondo.Name = "LabCadCondo";
+            this.LabCadCondo.Size = new System.Drawing.Size(246, 17);
+            this.LabCadCondo.TabIndex = 23;
+            this.LabCadCondo.Text = "Condomínio cadastrado com sucesso!";
+            this.LabCadCondo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabCadCondo.Visible = false;
             // 
-            // GroupInfoFinanceira
+            // BtnCadastrar
             // 
-            this.GroupInfoFinanceira.Controls.Add(this.LabValorCond);
-            this.GroupInfoFinanceira.Controls.Add(this.ComboCustos);
-            this.GroupInfoFinanceira.Controls.Add(this.TxtValorCustos);
-            this.GroupInfoFinanceira.Controls.Add(this.LabValorCustos);
-            this.GroupInfoFinanceira.Controls.Add(this.TxtValorCond);
-            this.GroupInfoFinanceira.Controls.Add(this.TxtValorMulta);
-            this.GroupInfoFinanceira.Controls.Add(this.LabCustos);
-            this.GroupInfoFinanceira.Controls.Add(this.LabMulta);
-            this.GroupInfoFinanceira.Controls.Add(this.ComboMulta);
-            this.GroupInfoFinanceira.Controls.Add(this.LabValorMulta);
-            this.GroupInfoFinanceira.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.GroupInfoFinanceira.Location = new System.Drawing.Point(47, 173);
-            this.GroupInfoFinanceira.Name = "GroupInfoFinanceira";
-            this.GroupInfoFinanceira.Size = new System.Drawing.Size(510, 136);
-            this.GroupInfoFinanceira.TabIndex = 20;
-            this.GroupInfoFinanceira.TabStop = false;
-            this.GroupInfoFinanceira.Text = "Informações Financeiras";
+            this.BtnCadastrar.Location = new System.Drawing.Point(595, 261);
+            this.BtnCadastrar.Name = "BtnCadastrar";
+            this.BtnCadastrar.Size = new System.Drawing.Size(92, 26);
+            this.BtnCadastrar.TabIndex = 21;
+            this.BtnCadastrar.Text = "Cadastrar";
+            this.BtnCadastrar.UseVisualStyleBackColor = true;
+            this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
-            // BtnProx
+            // GroupAdm
             // 
-            this.BtnProx.Location = new System.Drawing.Point(483, 314);
-            this.BtnProx.Name = "BtnProx";
-            this.BtnProx.Size = new System.Drawing.Size(74, 26);
-            this.BtnProx.TabIndex = 21;
-            this.BtnProx.Text = "Próximo";
-            this.BtnProx.UseVisualStyleBackColor = true;
-            this.BtnProx.Click += new System.EventHandler(this.BtnProx_Click);
+            this.GroupAdm.Controls.Add(this.LabCadAdm);
+            this.GroupAdm.Controls.Add(this.label1);
+            this.GroupAdm.Controls.Add(this.TxtConfirmarSenha);
+            this.GroupAdm.Controls.Add(this.TxtSenha);
+            this.GroupAdm.Controls.Add(this.LabConfirmarSenha);
+            this.GroupAdm.Controls.Add(this.LabSenha);
+            this.GroupAdm.Controls.Add(this.TxtCNPJ_CPF);
+            this.GroupAdm.Controls.Add(this.LabCNPJ_CPF);
+            this.GroupAdm.Controls.Add(this.label4);
+            this.GroupAdm.Controls.Add(this.TxtNomeAdm);
+            this.GroupAdm.Controls.Add(this.LabNomeAdm);
+            this.GroupAdm.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.GroupAdm.Location = new System.Drawing.Point(370, 52);
+            this.GroupAdm.Name = "GroupAdm";
+            this.GroupAdm.Size = new System.Drawing.Size(317, 195);
+            this.GroupAdm.TabIndex = 22;
+            this.GroupAdm.TabStop = false;
+            this.GroupAdm.Text = "Informações da Administração";
+            this.GroupAdm.Visible = false;
             // 
-            // BtnVoltar
+            // LabCadAdm
             // 
-            this.BtnVoltar.Location = new System.Drawing.Point(47, 314);
-            this.BtnVoltar.Name = "BtnVoltar";
-            this.BtnVoltar.Size = new System.Drawing.Size(75, 26);
-            this.BtnVoltar.TabIndex = 22;
-            this.BtnVoltar.Text = "Voltar";
-            this.BtnVoltar.UseVisualStyleBackColor = true;
+            this.LabCadAdm.AutoSize = true;
+            this.LabCadAdm.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LabCadAdm.Location = new System.Drawing.Point(25, 165);
+            this.LabCadAdm.Name = "LabCadAdm";
+            this.LabCadAdm.Size = new System.Drawing.Size(260, 17);
+            this.LabCadAdm.TabIndex = 17;
+            this.LabCadAdm.Text = "Admnistrador cadastrado com sucesso! ";
+            this.LabCadAdm.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-36, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 16;
+            // 
+            // TxtConfirmarSenha
+            // 
+            this.TxtConfirmarSenha.Location = new System.Drawing.Point(149, 109);
+            this.TxtConfirmarSenha.Name = "TxtConfirmarSenha";
+            this.TxtConfirmarSenha.Size = new System.Drawing.Size(100, 23);
+            this.TxtConfirmarSenha.TabIndex = 15;
+            // 
+            // TxtSenha
+            // 
+            this.TxtSenha.Location = new System.Drawing.Point(84, 80);
+            this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.Size = new System.Drawing.Size(100, 23);
+            this.TxtSenha.TabIndex = 14;
+            // 
+            // LabConfirmarSenha
+            // 
+            this.LabConfirmarSenha.AutoSize = true;
+            this.LabConfirmarSenha.Location = new System.Drawing.Point(25, 112);
+            this.LabConfirmarSenha.Name = "LabConfirmarSenha";
+            this.LabConfirmarSenha.Size = new System.Drawing.Size(118, 17);
+            this.LabConfirmarSenha.TabIndex = 13;
+            this.LabConfirmarSenha.Text = "Confirmar Senha:";
+            // 
+            // LabSenha
+            // 
+            this.LabSenha.AutoSize = true;
+            this.LabSenha.Location = new System.Drawing.Point(25, 81);
+            this.LabSenha.Name = "LabSenha";
+            this.LabSenha.Size = new System.Drawing.Size(53, 17);
+            this.LabSenha.TabIndex = 12;
+            this.LabSenha.Text = "Senha:";
+            // 
+            // TxtCNPJ_CPF
+            // 
+            this.TxtCNPJ_CPF.Location = new System.Drawing.Point(113, 51);
+            this.TxtCNPJ_CPF.Name = "TxtCNPJ_CPF";
+            this.TxtCNPJ_CPF.Size = new System.Drawing.Size(100, 23);
+            this.TxtCNPJ_CPF.TabIndex = 11;
+            // 
+            // LabCNPJ_CPF
+            // 
+            this.LabCNPJ_CPF.AutoSize = true;
+            this.LabCNPJ_CPF.Location = new System.Drawing.Point(25, 54);
+            this.LabCNPJ_CPF.Name = "LabCNPJ_CPF";
+            this.LabCNPJ_CPF.Size = new System.Drawing.Size(77, 17);
+            this.LabCNPJ_CPF.TabIndex = 10;
+            this.LabCNPJ_CPF.Text = "CNPJ/CPF:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(157, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 9;
+            // 
+            // TxtNomeAdm
+            // 
+            this.TxtNomeAdm.Location = new System.Drawing.Point(80, 22);
+            this.TxtNomeAdm.Name = "TxtNomeAdm";
+            this.TxtNomeAdm.Size = new System.Drawing.Size(100, 23);
+            this.TxtNomeAdm.TabIndex = 8;
+            // 
+            // LabNomeAdm
+            // 
+            this.LabNomeAdm.AutoSize = true;
+            this.LabNomeAdm.Location = new System.Drawing.Point(25, 22);
+            this.LabNomeAdm.Name = "LabNomeAdm";
+            this.LabNomeAdm.Size = new System.Drawing.Size(49, 17);
+            this.LabNomeAdm.TabIndex = 7;
+            this.LabNomeAdm.Text = "Nome:";
+            // 
+            // RadSelecionarCondo
+            // 
+            this.RadSelecionarCondo.AutoSize = true;
+            this.RadSelecionarCondo.Location = new System.Drawing.Point(47, 25);
+            this.RadSelecionarCondo.Name = "RadSelecionarCondo";
+            this.RadSelecionarCondo.Size = new System.Drawing.Size(210, 21);
+            this.RadSelecionarCondo.TabIndex = 23;
+            this.RadSelecionarCondo.TabStop = true;
+            this.RadSelecionarCondo.Text = "Deseja cadastrar condomínio";
+            this.RadSelecionarCondo.UseVisualStyleBackColor = true;
+            this.RadSelecionarCondo.CheckedChanged += new System.EventHandler(this.RadSelecionarCondo_CheckedChanged);
+            // 
+            // RadSelecionarAdm
+            // 
+            this.RadSelecionarAdm.AutoSize = true;
+            this.RadSelecionarAdm.Location = new System.Drawing.Point(370, 25);
+            this.RadSelecionarAdm.Name = "RadSelecionarAdm";
+            this.RadSelecionarAdm.Size = new System.Drawing.Size(224, 21);
+            this.RadSelecionarAdm.TabIndex = 24;
+            this.RadSelecionarAdm.TabStop = true;
+            this.RadSelecionarAdm.Text = "Deseja cadastrar administrador";
+            this.RadSelecionarAdm.UseVisualStyleBackColor = true;
+            this.RadSelecionarAdm.CheckedChanged += new System.EventHandler(this.RadSelecionarAdm_CheckedChanged);
             // 
             // CadastroCondominio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 352);
-            this.Controls.Add(this.BtnVoltar);
-            this.Controls.Add(this.BtnProx);
-            this.Controls.Add(this.GroupInfoFinanceira);
-            this.Controls.Add(this.GroupInfoBasica);
-            this.Controls.Add(this.LabTitulo);
+            this.ClientSize = new System.Drawing.Size(730, 299);
+            this.Controls.Add(this.RadSelecionarAdm);
+            this.Controls.Add(this.RadSelecionarCondo);
+            this.Controls.Add(this.GroupAdm);
+            this.Controls.Add(this.BtnCadastrar);
+            this.Controls.Add(this.GroupCondominio);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastroCondominio";
             this.Text = "CadastroCondomínio";
-            this.GroupInfoBasica.ResumeLayout(false);
-            this.GroupInfoBasica.PerformLayout();
-            this.GroupInfoFinanceira.ResumeLayout(false);
-            this.GroupInfoFinanceira.PerformLayout();
+            this.GroupCondominio.ResumeLayout(false);
+            this.GroupCondominio.PerformLayout();
+            this.GroupAdm.ResumeLayout(false);
+            this.GroupAdm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LabTitulo;
         private System.Windows.Forms.Label LabNome;
         private System.Windows.Forms.Label LabEndereço;
         private System.Windows.Forms.Label LabCNPJ;
@@ -310,20 +368,25 @@
         private System.Windows.Forms.TextBox TxtNome;
         private System.Windows.Forms.TextBox TxtValorCond;
         private System.Windows.Forms.TextBox TxtEndereco;
-        private System.Windows.Forms.ComboBox ComboCustos;
         private System.Windows.Forms.Label LabValorCond;
-        private System.Windows.Forms.Label LabMulta;
-        private System.Windows.Forms.Label LabValorMulta;
-        private System.Windows.Forms.TextBox TxtValorCustos;
         private System.Windows.Forms.TextBox TxtCNPJ;
-        private System.Windows.Forms.ComboBox ComboMulta;
-        private System.Windows.Forms.Label LabCustos;
-        private System.Windows.Forms.Label LabValorCustos;
         private System.Windows.Forms.ComboBox ComboAptNumero;
-        private System.Windows.Forms.TextBox TxtValorMulta;
-        private System.Windows.Forms.GroupBox GroupInfoBasica;
-        private System.Windows.Forms.GroupBox GroupInfoFinanceira;
-        private System.Windows.Forms.Button BtnProx;
-        private System.Windows.Forms.Button BtnVoltar;
+        private System.Windows.Forms.GroupBox GroupCondominio;
+        private System.Windows.Forms.Button BtnCadastrar;
+        private System.Windows.Forms.GroupBox GroupAdm;
+        private System.Windows.Forms.TextBox TxtCNPJ_CPF;
+        private System.Windows.Forms.Label LabCNPJ_CPF;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtNomeAdm;
+        private System.Windows.Forms.Label LabNomeAdm;
+        private System.Windows.Forms.TextBox TxtConfirmarSenha;
+        private System.Windows.Forms.MaskedTextBox TxtSenha;
+        private System.Windows.Forms.Label LabConfirmarSenha;
+        private System.Windows.Forms.Label LabSenha;
+        private System.Windows.Forms.Label LabCadCondo;
+        private System.Windows.Forms.Label LabCadAdm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton RadSelecionarCondo;
+        private System.Windows.Forms.RadioButton RadSelecionarAdm;
     }
 }

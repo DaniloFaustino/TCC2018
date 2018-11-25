@@ -34,7 +34,6 @@
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.BtnEntrar = new System.Windows.Forms.Button();
             this.LinkCad = new System.Windows.Forms.LinkLabel();
-            this.LinkSenha = new System.Windows.Forms.LinkLabel();
             this.LabErro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -95,21 +94,11 @@
             this.LinkCad.Text = "Não possuo cadastro";
             this.LinkCad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkCad_LinkClicked);
             // 
-            // LinkSenha
-            // 
-            this.LinkSenha.AutoSize = true;
-            this.LinkSenha.Location = new System.Drawing.Point(78, 211);
-            this.LinkSenha.Name = "LinkSenha";
-            this.LinkSenha.Size = new System.Drawing.Size(108, 13);
-            this.LinkSenha.TabIndex = 6;
-            this.LinkSenha.TabStop = true;
-            this.LinkSenha.Text = "Esqueci minha senha";
-            // 
             // LabErro
             // 
             this.LabErro.AutoSize = true;
             this.LabErro.ForeColor = System.Drawing.Color.Red;
-            this.LabErro.Location = new System.Drawing.Point(78, 239);
+            this.LabErro.Location = new System.Drawing.Point(78, 212);
             this.LabErro.Name = "LabErro";
             this.LabErro.Size = new System.Drawing.Size(115, 13);
             this.LabErro.TabIndex = 7;
@@ -121,9 +110,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 247);
             this.Controls.Add(this.LabErro);
-            this.Controls.Add(this.LinkSenha);
             this.Controls.Add(this.LinkCad);
             this.Controls.Add(this.BtnEntrar);
             this.Controls.Add(this.TxtSenha);
@@ -145,7 +133,6 @@
         private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.Button BtnEntrar;
         private System.Windows.Forms.LinkLabel LinkCad;
-        private System.Windows.Forms.LinkLabel LinkSenha;
         private System.Windows.Forms.Label LabErro;
     }
 }

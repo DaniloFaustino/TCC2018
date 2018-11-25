@@ -52,17 +52,17 @@
     <Compile Include="CadastroCondominio.Designer.cs">
       <DependentUpon>CadastroCondominio.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroCondomino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCondomino.Designer.cs">
+      <DependentUpon>CadastroCondomino.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroOpcoes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastroOpcoes.Designer.cs">
       <DependentUpon>CadastroOpcoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroSindico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroSindico.Designer.cs">
-      <DependentUpon>CadastroSindico.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -87,11 +87,11 @@
     <EmbeddedResource Include="CadastroCondominio.resx">
       <DependentUpon>CadastroCondominio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCondomino.resx">
+      <DependentUpon>CadastroCondomino.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroOpcoes.resx">
       <DependentUpon>CadastroOpcoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastroSindico.resx">
-      <DependentUpon>CadastroSindico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

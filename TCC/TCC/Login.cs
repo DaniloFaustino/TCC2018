@@ -28,20 +28,24 @@ namespace TCC
 
         }
 
+        //Ação caso a opção entrar seja escolhida 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = Condominio; Integrated Security = SSPI;");
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
+            //Verifica se todos os campos foram preenchidos
             if (TxtUser.Text == "" || TxtSenha.Text == "")
             {
                 LabErro.Visible = true; 
                 TxtUser.Text = "";
                 TxtSenha.Text = "";
             }
+            //Caso todos os campos forem preenchidos 
             else
             {
+                //Verifica se as informações batem com um cadastro já existente de admnistrador 
                 comd.CommandText = "SELECT CPF_CNPJ FROM ADMINISTRACAO WHERE CPF_CNPJ = @User AND SENHA = @Senha";
                 comd.Parameters.AddWithValue("User", TxtUser.Text);
                 comd.Parameters.AddWithValue("Senha", TxtSenha.Text);
@@ -57,6 +61,7 @@ namespace TCC
                 reader.Close();
                 comd.Connection.Close();
 
+                //Verifica se as informações batem com um cadastro já existente de condômino
                 comd.CommandText = "SELECT CPF FROM CONDOMINO WHERE CPF = @Cpf AND SENHA = @Senha";
                 comd.Parameters.RemoveAt("Senha");
                 comd.Parameters.AddWithValue("Cpf", TxtUser.Text);
@@ -73,12 +78,14 @@ namespace TCC
                 reader.Close();
                 comd.Connection.Close();
 
+                //Caso não exista nem admnistrador nem condômino
                 if (adm == "" && condo == "")
                 {
-                    LabErro.Text = "Informações Inválidas";
+                    LabErro.Visible = true; 
                     TxtUser.Text = "";
                     TxtSenha.Text = "";
                 }
+                //Caso exista administrador
                 else if (adm != "" && condo == "")
                 {
                     this.Usuario = TxtUser.Text;
@@ -88,6 +95,7 @@ namespace TCC
                     LogouCondomino = false; 
                     this.Close();
                 }
+                //Caso exista condômino
                 else if (adm == "" && condo != "")
                 {
                     this.Usuario = TxtUser.Text;
@@ -102,6 +110,7 @@ namespace TCC
 
         }
 
+        //Ação caso a opção cadastrar seja selecionada
         private void LinkCad_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroOpcoes cadOp = new CadastroOpcoes();
