@@ -55,6 +55,8 @@
             this.LabNomeAdm = new System.Windows.Forms.Label();
             this.RadSelecionarCondo = new System.Windows.Forms.RadioButton();
             this.RadSelecionarAdm = new System.Windows.Forms.RadioButton();
+            this.TxtCNPJAdm = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.GroupCondominio.SuspendLayout();
             this.GroupAdm.SuspendLayout();
             this.SuspendLayout();
@@ -202,6 +204,8 @@
             // 
             // GroupAdm
             // 
+            this.GroupAdm.Controls.Add(this.TxtCNPJAdm);
+            this.GroupAdm.Controls.Add(this.label2);
             this.GroupAdm.Controls.Add(this.LabCadAdm);
             this.GroupAdm.Controls.Add(this.label1);
             this.GroupAdm.Controls.Add(this.TxtConfirmarSenha);
@@ -226,7 +230,7 @@
             // 
             this.LabCadAdm.AutoSize = true;
             this.LabCadAdm.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LabCadAdm.Location = new System.Drawing.Point(25, 165);
+            this.LabCadAdm.Location = new System.Drawing.Point(25, 168);
             this.LabCadAdm.Name = "LabCadAdm";
             this.LabCadAdm.Size = new System.Drawing.Size(260, 17);
             this.LabCadAdm.TabIndex = 17;
@@ -243,22 +247,24 @@
             // 
             // TxtConfirmarSenha
             // 
-            this.TxtConfirmarSenha.Location = new System.Drawing.Point(149, 109);
+            this.TxtConfirmarSenha.Location = new System.Drawing.Point(149, 139);
             this.TxtConfirmarSenha.Name = "TxtConfirmarSenha";
+            this.TxtConfirmarSenha.PasswordChar = '*';
             this.TxtConfirmarSenha.Size = new System.Drawing.Size(100, 23);
             this.TxtConfirmarSenha.TabIndex = 15;
             // 
             // TxtSenha
             // 
-            this.TxtSenha.Location = new System.Drawing.Point(84, 80);
+            this.TxtSenha.Location = new System.Drawing.Point(84, 110);
             this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.PasswordChar = '*';
             this.TxtSenha.Size = new System.Drawing.Size(100, 23);
             this.TxtSenha.TabIndex = 14;
             // 
             // LabConfirmarSenha
             // 
             this.LabConfirmarSenha.AutoSize = true;
-            this.LabConfirmarSenha.Location = new System.Drawing.Point(25, 112);
+            this.LabConfirmarSenha.Location = new System.Drawing.Point(25, 142);
             this.LabConfirmarSenha.Name = "LabConfirmarSenha";
             this.LabConfirmarSenha.Size = new System.Drawing.Size(118, 17);
             this.LabConfirmarSenha.TabIndex = 13;
@@ -267,7 +273,7 @@
             // LabSenha
             // 
             this.LabSenha.AutoSize = true;
-            this.LabSenha.Location = new System.Drawing.Point(25, 81);
+            this.LabSenha.Location = new System.Drawing.Point(25, 113);
             this.LabSenha.Name = "LabSenha";
             this.LabSenha.Size = new System.Drawing.Size(53, 17);
             this.LabSenha.TabIndex = 12;
@@ -275,7 +281,7 @@
             // 
             // TxtCNPJ_CPF
             // 
-            this.TxtCNPJ_CPF.Location = new System.Drawing.Point(113, 51);
+            this.TxtCNPJ_CPF.Location = new System.Drawing.Point(108, 51);
             this.TxtCNPJ_CPF.Name = "TxtCNPJ_CPF";
             this.TxtCNPJ_CPF.Size = new System.Drawing.Size(100, 23);
             this.TxtCNPJ_CPF.TabIndex = 11;
@@ -299,7 +305,7 @@
             // 
             // TxtNomeAdm
             // 
-            this.TxtNomeAdm.Location = new System.Drawing.Point(80, 22);
+            this.TxtNomeAdm.Location = new System.Drawing.Point(84, 22);
             this.TxtNomeAdm.Name = "TxtNomeAdm";
             this.TxtNomeAdm.Size = new System.Drawing.Size(100, 23);
             this.TxtNomeAdm.TabIndex = 8;
@@ -307,7 +313,7 @@
             // LabNomeAdm
             // 
             this.LabNomeAdm.AutoSize = true;
-            this.LabNomeAdm.Location = new System.Drawing.Point(25, 22);
+            this.LabNomeAdm.Location = new System.Drawing.Point(25, 25);
             this.LabNomeAdm.Name = "LabNomeAdm";
             this.LabNomeAdm.Size = new System.Drawing.Size(49, 17);
             this.LabNomeAdm.TabIndex = 7;
@@ -336,6 +342,22 @@
             this.RadSelecionarAdm.Text = "Deseja cadastrar administrador";
             this.RadSelecionarAdm.UseVisualStyleBackColor = true;
             this.RadSelecionarAdm.CheckedChanged += new System.EventHandler(this.RadSelecionarAdm_CheckedChanged);
+            // 
+            // TxtCNPJAdm
+            // 
+            this.TxtCNPJAdm.Location = new System.Drawing.Point(176, 81);
+            this.TxtCNPJAdm.Name = "TxtCNPJAdm";
+            this.TxtCNPJAdm.Size = new System.Drawing.Size(100, 23);
+            this.TxtCNPJAdm.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "CNPJ do Condomínio:";
             // 
             // CadastroCondominio
             // 
@@ -388,5 +410,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton RadSelecionarCondo;
         private System.Windows.Forms.RadioButton RadSelecionarAdm;
+        private System.Windows.Forms.TextBox TxtCNPJAdm;
+        private System.Windows.Forms.Label label2;
     }
 }

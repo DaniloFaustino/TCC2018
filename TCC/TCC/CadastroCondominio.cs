@@ -96,42 +96,68 @@ namespace TCC
                 //Ação se todos os campos forem preenchidos
                 else
                 {
-                    //Verifica se já existe algum CPF/CNPJ de admnistrador cadastrado
-                    comd.CommandText = "SELECT CPF_CNPJ FROM ADMINISTRACAO WHERE CPF_CNPJ = @Verificar";
-                    comd.Parameters.AddWithValue("Verificar", TxtCNPJ_CPF.Text);
+                    //Verifica se o condomínio escolhido existe
+                    comd.CommandText = "SELECT CNPJ FROM CONDOMINIO WHERE CNPJ = @Cond";
+                    comd.Parameters.AddWithValue("Cond", TxtCNPJAdm.Text);
 
                     comd.Connection.Open();
-                    SqlDataReader reader = comd.ExecuteReader();
-                    string cpf_cnpj = "";
-                    if (reader.HasRows)
+                    SqlDataReader ler = comd.ExecuteReader();
+                    string cnpj = "";
+                    if (ler.HasRows)
                     {
-                        reader.Read();
-                        cpf_cnpj = reader.GetString(0);
+                        ler.Read();
+                        cnpj = ler.GetString(0);
                     }
-                    reader.Close();
+                    ler.Close();
                     comd.Connection.Close();
 
-                    if (cpf_cnpj != "")
-                    { 
+                    if (cnpj == "")
+                    {
                         LabCadAdm.Visible = true;
 
-                        LabCadAdm.Text = "CPF/CNPJ já cadastrado";
+                        LabCadAdm.Text = "Não há condomínio cadastrado para esse CNPJ";
                     }
-                    //Se não existir nenhum CPF/CNPJ, ação de cadastrar admnistrador
+
                     else
                     {
-                        comd.CommandText = "INSERT INTO ADMINISTRACAO (CPF_CNPJ, Senha, Nome) VALUES (@CPF, @Senha, @Nome)";
-                        comd.Parameters.AddWithValue("CPF", TxtCNPJ_CPF.Text);
-                        comd.Parameters.AddWithValue("Senha", TxtSenha.Text);
-                        comd.Parameters.AddWithValue("Nome", TxtNomeAdm.Text);
+                        //Verifica se já existe algum CPF/CNPJ de admnistrador cadastrado
+                        comd.CommandText = "SELECT CPF_CNPJ FROM ADMINISTRACAO WHERE CPF_CNPJ = @Verificar";
+                        comd.Parameters.AddWithValue("Verificar", TxtCNPJ_CPF.Text);
 
-                        conex.Open();
-                        comd.ExecuteNonQuery();
-                        conex.Close();
+                        comd.Connection.Open();
+                        SqlDataReader reader = comd.ExecuteReader();
+                        string cpf_cnpj = "";
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            cpf_cnpj = reader.GetString(0);
+                        }
+                        reader.Close();
+                        comd.Connection.Close();
 
-                        LabCadAdm.Visible = true;
-                        LabCadAdm.Text = "Condomínio cadastrado com sucesso!";
-                     }
+                        if (cpf_cnpj != "")
+                        {
+                            LabCadAdm.Visible = true;
+
+                            LabCadAdm.Text = "CPF/CNPJ já cadastrado";
+                        }
+                        //Se não existir nenhum CPF/CNPJ, ação de cadastrar admnistrador
+                        else
+                        {
+                            comd.CommandText = "INSERT INTO ADMINISTRACAO (CPF_CNPJ, Senha, Nome, Condominio) VALUES (@CPF, @Senha, @Nome, @Condominio)";
+                            comd.Parameters.AddWithValue("CPF", TxtCNPJ_CPF.Text);
+                            comd.Parameters.AddWithValue("Senha", TxtSenha.Text);
+                            comd.Parameters.AddWithValue("Nome", TxtNomeAdm.Text);
+                            comd.Parameters.AddWithValue("Condominio", TxtCNPJAdm.Text);
+
+                            conex.Open();
+                            comd.ExecuteNonQuery();
+                            conex.Close();
+
+                            LabCadAdm.Visible = true;
+                            LabCadAdm.Text = "Administrador cadastrado com sucesso!";
+                        }
+                    }   
                  }
             }
         }

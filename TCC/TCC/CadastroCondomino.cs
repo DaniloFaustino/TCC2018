@@ -20,23 +20,6 @@ namespace TCC
 
         private void CadastroCondomino_Load(object sender, EventArgs e)
         {
-            SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = Condominio; Integrated Security = SSPI;");
-            SqlCommand comd = new SqlCommand();
-            comd.Connection = conex;
-
-            //criar um DataTable
-            DataTable dtTabelas = new DataTable();
-
-            //criar um adaptador
-            SqlDataAdapter da = new SqlDataAdapter("select cnpj from condominio", conex);
-
-            //preenche o DataTable
-            da.Fill(dtTabelas);
-
-            //carrega as informacoes no combo
-            ComboCondo.DataSource = dtTabelas;
-            ComboCondo.DisplayMember = "campo";
-            ComboCondo.ValueMember = "campo";
 
         }
 
@@ -47,7 +30,7 @@ namespace TCC
             comd.Connection = conex;
 
             //Verifica se todos os campos foram preenchidos
-            if (TxtCPF.Text == "" || TxtNome.Text == "" || TxtSenha.Text == "" || TxtConfirmarSenha.Text == "" || TxtSenha.Text != TxtConfirmarSenha.Text)
+            if (TxtCPF.Text == "" || TxtNome.Text == "" || TxtSenha.Text == "" || TxtConfirmarSenha.Text == "" || TxtSenha.Text != TxtConfirmarSenha.Text || TxtCNPJCondominio.Text == "")
             {
                 LabCadCondo.Visible = true;
                 LabCadCondo.Text = "Dados incorretos ou incompletos";
@@ -55,43 +38,68 @@ namespace TCC
             //Ação se todos os campos forem preenchidos
             else
             {
-                //Verifica se já existe algum CNPJ de condomínio cadastrado
-                comd.CommandText = "SELECT CPF FROM CONDOMiNO WHERE CPF = @Teste";
-                comd.Parameters.AddWithValue("Teste", TxtCPF.Text);
+                //Verifica se o condomínio escolhido existe
+                comd.CommandText = "SELECT CNPJ FROM CONDOMINIO WHERE CNPJ = @Cond";
+                comd.Parameters.AddWithValue("Cond", TxtCNPJCondominio.Text);
 
                 comd.Connection.Open();
-                SqlDataReader reader = comd.ExecuteReader();
-                string cpf = "";
-                if (reader.HasRows)
+                SqlDataReader ler = comd.ExecuteReader();
+                string cnpj = "";
+                if (ler.HasRows)
                 {
-                    reader.Read();
-                    cpf = reader.GetString(0);
+                    ler.Read();
+                    cnpj = ler.GetString(0);
                 }
-                reader.Close();
+                ler.Close();
                 comd.Connection.Close();
 
-                if (cpf != "")
+                if (cnpj == "")
                 {
                     LabCadCondo.Visible = true;
 
-                    LabCadCondo.Text = "CPFJ já cadastrado";
+                    LabCadCondo.Text = "Não há condomínio cadastrado para esse CNPJ";
                 }
-                //Se não existir nenhum CNPJ, ação de cadastrar condomínio
+                //Se existir um condomínio já cadastrado
                 else
                 {
-                    comd.CommandText = "INSERT INTO CONDOMINO (CPF, Senha, Nome, Condominio, Apartamento) VALUES (@CPF, @Senha, @Nome, @Condominio, @Apartamento)";
-                    comd.Parameters.AddWithValue("CPF", TxtCPF.Text);
-                    comd.Parameters.AddWithValue("Nome", TxtNome.Text);
-                    comd.Parameters.AddWithValue("Senha", TxtSenha.Text);
-                    comd.Parameters.AddWithValue("Condominio", ComboCondo.Text);
-                    comd.Parameters.AddWithValue("Apartamento", TxtApt.Text);
+                    //Verifica se já existe algum CPF/CNPJ de condômino cadastrado
+                    comd.CommandText = "SELECT CPF FROM CONDOMINO WHERE CPF = @Verificar";
+                    comd.Parameters.AddWithValue("Verificar", TxtCPF.Text);
 
-                    conex.Open();
-                    comd.ExecuteNonQuery();
-                    conex.Close();
+                    comd.Connection.Open();
+                    SqlDataReader reader = comd.ExecuteReader();
+                    string cpf_cnpj = "";
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        cpf_cnpj = reader.GetString(0);
+                    }
+                    reader.Close();
+                    comd.Connection.Close();
 
-                    LabCadCondo.Visible = true;
-                    LabCadCondo.Text = "Condomínio cadastrado com sucesso!";
+                    if (cpf_cnpj != "")
+                    {
+                        LabCadCondo.Visible = true;
+
+                        LabCadCondo.Text = "CPF já cadastrado";
+                    }
+                    //Se não existir nenhum CPF/CNPJ, ação de cadastrar condômino
+                    else
+                    {
+                        comd.CommandText = "INSERT INTO CONDOMINO (CPF, Senha, Nome, Condominio, Apartamento) VALUES (@CPF, @Senha, @Nome, @Condominio, @Apartamento)";
+                        comd.Parameters.AddWithValue("CPF", TxtCPF.Text);
+                        comd.Parameters.AddWithValue("Senha", TxtSenha.Text);
+                        comd.Parameters.AddWithValue("Nome", TxtNome.Text);
+                        comd.Parameters.AddWithValue("Condominio", TxtCNPJCondominio.Text);
+                        comd.Parameters.AddWithValue("Apartamento", TxtApt.Text);
+
+                        conex.Open();
+                        comd.ExecuteNonQuery();
+                        conex.Close();
+
+                        LabCadCondo.Visible = true;
+                        LabCadCondo.Text = "Condômino cadastrado com sucesso!";
+                    }
                 }
             }
         }
