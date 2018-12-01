@@ -11,7 +11,8 @@ namespace TCC
 
         static Login telaLogin;
         static MenuAdministracao telaPrincipalAdm;
-        static MenuCondomino telaPrincipalCondomino; 
+        static MenuCondomino telaPrincipalCondomino;
+         
 
         /// <summary>
         /// The main entry point for the application.
@@ -28,6 +29,7 @@ namespace TCC
 
             telaLogin.FormClosed += new FormClosedEventHandler(telaLogin_FormClosed);
             telaPrincipalAdm.FormClosed += new FormClosedEventHandler(telaPrincipalAdm_FormClosed);
+            
             telaLogin.Show();
 
             Application.Run();
@@ -40,7 +42,7 @@ namespace TCC
                 telaPrincipalAdm.StartPosition = FormStartPosition.Manual;
                 telaPrincipalAdm.Location = telaLogin.Location;
 
-                //telaPrincipalAdm.pegaOrigemDosDados(telaLogin);
+                telaPrincipalAdm.pegaOrigemDosDados(telaLogin);
 
                 telaPrincipalAdm.Show();
             }

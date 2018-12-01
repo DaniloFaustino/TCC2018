@@ -42,6 +42,8 @@
             this.LabCadCondo = new System.Windows.Forms.Label();
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.GroupAdm = new System.Windows.Forms.GroupBox();
+            this.TxtCNPJAdm = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.LabCadAdm = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtConfirmarSenha = new System.Windows.Forms.TextBox();
@@ -55,8 +57,7 @@
             this.LabNomeAdm = new System.Windows.Forms.Label();
             this.RadSelecionarCondo = new System.Windows.Forms.RadioButton();
             this.RadSelecionarAdm = new System.Windows.Forms.RadioButton();
-            this.TxtCNPJAdm = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.CheckExiste = new System.Windows.Forms.CheckBox();
             this.GroupCondominio.SuspendLayout();
             this.GroupAdm.SuspendLayout();
             this.SuspendLayout();
@@ -172,7 +173,7 @@
             this.GroupCondominio.Controls.Add(this.TxtCNPJ);
             this.GroupCondominio.Controls.Add(this.LabAptNumero);
             this.GroupCondominio.ForeColor = System.Drawing.Color.Sienna;
-            this.GroupCondominio.Location = new System.Drawing.Point(47, 52);
+            this.GroupCondominio.Location = new System.Drawing.Point(47, 77);
             this.GroupCondominio.Name = "GroupCondominio";
             this.GroupCondominio.Size = new System.Drawing.Size(317, 195);
             this.GroupCondominio.TabIndex = 19;
@@ -194,7 +195,7 @@
             // 
             // BtnCadastrar
             // 
-            this.BtnCadastrar.Location = new System.Drawing.Point(595, 261);
+            this.BtnCadastrar.Location = new System.Drawing.Point(595, 282);
             this.BtnCadastrar.Name = "BtnCadastrar";
             this.BtnCadastrar.Size = new System.Drawing.Size(92, 26);
             this.BtnCadastrar.TabIndex = 21;
@@ -218,13 +219,29 @@
             this.GroupAdm.Controls.Add(this.TxtNomeAdm);
             this.GroupAdm.Controls.Add(this.LabNomeAdm);
             this.GroupAdm.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.GroupAdm.Location = new System.Drawing.Point(370, 52);
+            this.GroupAdm.Location = new System.Drawing.Point(370, 77);
             this.GroupAdm.Name = "GroupAdm";
             this.GroupAdm.Size = new System.Drawing.Size(317, 195);
             this.GroupAdm.TabIndex = 22;
             this.GroupAdm.TabStop = false;
             this.GroupAdm.Text = "Informações da Administração";
             this.GroupAdm.Visible = false;
+            // 
+            // TxtCNPJAdm
+            // 
+            this.TxtCNPJAdm.Location = new System.Drawing.Point(176, 81);
+            this.TxtCNPJAdm.Name = "TxtCNPJAdm";
+            this.TxtCNPJAdm.Size = new System.Drawing.Size(100, 23);
+            this.TxtCNPJAdm.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "CNPJ do Condomínio:";
             // 
             // LabCadAdm
             // 
@@ -343,27 +360,24 @@
             this.RadSelecionarAdm.UseVisualStyleBackColor = true;
             this.RadSelecionarAdm.CheckedChanged += new System.EventHandler(this.RadSelecionarAdm_CheckedChanged);
             // 
-            // TxtCNPJAdm
+            // CheckExiste
             // 
-            this.TxtCNPJAdm.Location = new System.Drawing.Point(176, 81);
-            this.TxtCNPJAdm.Name = "TxtCNPJAdm";
-            this.TxtCNPJAdm.Size = new System.Drawing.Size(100, 23);
-            this.TxtCNPJAdm.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 17);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "CNPJ do Condomínio:";
+            this.CheckExiste.AutoSize = true;
+            this.CheckExiste.Location = new System.Drawing.Point(370, 52);
+            this.CheckExiste.Name = "CheckExiste";
+            this.CheckExiste.Size = new System.Drawing.Size(116, 21);
+            this.CheckExiste.TabIndex = 25;
+            this.CheckExiste.Text = "Adm Existente";
+            this.CheckExiste.UseVisualStyleBackColor = true;
+            this.CheckExiste.Visible = false;
+            this.CheckExiste.CheckedChanged += new System.EventHandler(this.CheckExiste_CheckedChanged);
             // 
             // CadastroCondominio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 299);
+            this.ClientSize = new System.Drawing.Size(730, 320);
+            this.Controls.Add(this.CheckExiste);
             this.Controls.Add(this.RadSelecionarAdm);
             this.Controls.Add(this.RadSelecionarCondo);
             this.Controls.Add(this.GroupAdm);
@@ -412,5 +426,6 @@
         private System.Windows.Forms.RadioButton RadSelecionarAdm;
         private System.Windows.Forms.TextBox TxtCNPJAdm;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox CheckExiste;
     }
 }

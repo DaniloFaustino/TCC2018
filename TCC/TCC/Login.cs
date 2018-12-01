@@ -31,7 +31,7 @@ namespace TCC
         //Ação caso a opção entrar seja escolhida 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = Condominio; Integrated Security = SSPI;");
+            SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = TCC; Integrated Security = SSPI;");
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
