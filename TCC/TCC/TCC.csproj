@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarMulta.cs">
+    <Compile Include="Administracao\AdicionarDebito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarMulta.Designer.cs">
+    <Compile Include="Administracao\AdicionarDebito.Designer.cs">
+      <DependentUpon>AdicionarDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\AdicionarMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracao\AdicionarMulta.Designer.cs">
       <DependentUpon>AdicionarMulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastro\CadastroCondominio.cs">
@@ -70,10 +76,10 @@
     <Compile Include="Cadastro\CadastroOpcoes.Designer.cs">
       <DependentUpon>CadastroOpcoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="CondominosAdm.cs">
+    <Compile Include="Administracao\CondominosAdm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CondominosAdm.Designer.cs">
+    <Compile Include="Administracao\CondominosAdm.Designer.cs">
       <DependentUpon>CondominosAdm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -96,7 +102,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdicionarMulta.resx">
+    <Compile Include="Administracao\RegistrarPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracao\RegistrarPagamentos.Designer.cs">
+      <DependentUpon>RegistrarPagamentos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administracao\AdicionarDebito.resx">
+      <DependentUpon>AdicionarDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracao\AdicionarMulta.resx">
       <DependentUpon>AdicionarMulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\CadastroCondominio.resx">
@@ -108,7 +123,7 @@
     <EmbeddedResource Include="Cadastro\CadastroOpcoes.resx">
       <DependentUpon>CadastroOpcoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CondominosAdm.resx">
+    <EmbeddedResource Include="Administracao\CondominosAdm.resx">
       <DependentUpon>CondominosAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -129,6 +144,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracao\RegistrarPagamentos.resx">
+      <DependentUpon>RegistrarPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

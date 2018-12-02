@@ -25,5 +25,17 @@ namespace TCC
             AdicionarMulta addMulta = new AdicionarMulta(Adm);
             addMulta.ShowDialog(); 
         }
+
+        private void BtnDebito_Click(object sender, EventArgs e)
+        {
+            AdicionarDebito addDebito = new AdicionarDebito(Adm);
+            addDebito.ShowDialog(); 
+        }
+
+        private void BtnRegistrarPagamentos_Click(object sender, EventArgs e)
+        {
+            RegistrarPagamentos regPag = new RegistrarPagamentos(Adm);
+            regPag.ShowDialog(); 
+        }
     }
 }
