@@ -58,6 +58,12 @@
     <Compile Include="Administracao\AdicionarMulta.Designer.cs">
       <DependentUpon>AdicionarMulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarMulta.Designer.cs">
+      <DependentUpon>CadastrarMulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro\CadastroCondominio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,18 @@
     </Compile>
     <Compile Include="Administracao\CondominosAdm.Designer.cs">
       <DependentUpon>CondominosAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\CondominioAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracao\CondominioAdm.Designer.cs">
+      <DependentUpon>CondominioAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DespesaAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracao\DespesaAdm.Designer.cs">
+      <DependentUpon>DespesaAdm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -114,6 +132,9 @@
     <EmbeddedResource Include="Administracao\AdicionarMulta.resx">
       <DependentUpon>AdicionarMulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarMulta.resx">
+      <DependentUpon>CadastrarMulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\CadastroCondominio.resx">
       <DependentUpon>CadastroCondominio.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracao\CondominosAdm.resx">
       <DependentUpon>CondominosAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracao\CondominioAdm.resx">
+      <DependentUpon>CondominioAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracao\DespesaAdm.resx">
+      <DependentUpon>DespesaAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

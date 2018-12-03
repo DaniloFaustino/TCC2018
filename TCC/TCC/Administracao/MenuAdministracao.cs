@@ -29,5 +29,16 @@ namespace TCC
             CondominosAdm novoCondominos = new CondominosAdm(Adm);
             novoCondominos.ShowDialog(); 
         }
+
+        private void BtnCondominios_Click(object sender, EventArgs e)
+        {
+            CondominioAdm novoCondominio = new CondominioAdm(Adm);
+            novoCondominio.ShowDialog(); 
+        }
+
+        private void MenuAdministracao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.BtnCondominios.TabIndex = 0;
             this.BtnCondominios.Text = "Condomínios";
             this.BtnCondominios.UseVisualStyleBackColor = true;
+            this.BtnCondominios.Click += new System.EventHandler(this.BtnCondominios_Click);
             // 
             // BtnCondominos
             // 
@@ -60,6 +61,7 @@
             this.Controls.Add(this.BtnCondominios);
             this.Name = "MenuAdministracao";
             this.Text = "MenuAdministracao";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuAdministracao_FormClosed);
             this.ResumeLayout(false);
 
         }

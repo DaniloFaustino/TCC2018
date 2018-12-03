@@ -248,6 +248,7 @@ namespace TCC
         {
             GroupCondominio.Visible = true;
             checkCondo = true;
+            checkAdm = false; 
             GroupAdm.Visible = false;
             CheckExiste.Visible = false; 
         }
@@ -257,6 +258,7 @@ namespace TCC
         {
             GroupAdm.Visible = true;
             checkAdm = true;
+            checkCondo = false; 
             GroupCondominio.Visible = false;
             CheckExiste.Visible = true; 
         }
